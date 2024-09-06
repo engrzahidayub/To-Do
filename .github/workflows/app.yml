@@ -1,4 +1,4 @@
-name: CI/CD for react reactapp 
+name: CI/CD for react Todo 
 
 on:
   push:
@@ -20,12 +20,12 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          cd reactapp
+          cd todo
           npm install
 
       - name: Build Project
         run: |
-          cd reactapp
+          cd todo
           npm run build
 
       - name: Upload artifact to enable deployment
@@ -51,4 +51,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: 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 #this is the key of the access token
-          publish_dir: ./reactapp/build
+          publish_dir: ./todo/build
